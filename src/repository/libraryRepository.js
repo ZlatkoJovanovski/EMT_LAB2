@@ -10,10 +10,10 @@ const libraryService = {
         return axios.get("/countries")
     },
     deleteBook: (id) => {
-        return axios.delete(`/books/delete/${id}`);
+        return axios.delete(`/delete/${id}`);
     },
     addBook: (name, availableCopies, category, author) => {
-        return axios.post("/books/add", {
+        return axios.post("/add", {
             "name" : name,
             "availableCopies" : availableCopies,
             "category" : category,
@@ -21,7 +21,7 @@ const libraryService = {
         });
     },
     editBook: (id, name, availableCopies, category, author) => {
-        return axios.put(`/books/edit/${id}`, {
+        return axios.put(`/edit/${id}`, {
             "name" : name,
             "availableCopies" : availableCopies,
             "category" : category,
@@ -29,7 +29,7 @@ const libraryService = {
         });
     },
     getBook: (id) => {
-        return axios.get(`/books/${id}`);
+        return axios.get(`/${id}`);
     }
 }
 export default libraryService;
